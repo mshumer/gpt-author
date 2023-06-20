@@ -4,6 +4,8 @@ This project utilizes a chain of GPT-4 and Stable Diffusion API calls to generat
 
 A 15-chapter novel can cost as little as $4 to produce, and is written in just a few minutes.
 
+A few output novel examples are provided in this repo.
+
 ## How It Works
 
 The AI is asked to generate a list of potential plots based on a given prompt. It then selects the most engaging plot, improves upon it, and extracts a title. After that, it generates a detailed storyline with a specified number of chapters, and then tries to improve upon that storyline. Each chapter is then individually written by the AI, following the plot and taking into account the content of previous chapters. Finally, a prompt to design the cover art is generated, and the cover is created. Finally, it's all pulled together, and the novel is compiled into an EPUB file.
@@ -25,7 +27,8 @@ In the last cell of the notebook, you can customize the prompt and the number of
 ```python
 prompt = "Similar to Percy Jackson or Harry Potter in terms of vibes, but a different plot entirely. Set in modern day. Add some element of technology to it."
 num_chapters = 20
-novel, title, chapters, chapter_titles = write_fantasy_novel(prompt, num_chapters)
+writing_style = "Clear and easily understandable, similar to a young adult novel. Highly descriptive and sometimes long-winded."
+novel, title, chapters, chapter_titles = write_fantasy_novel(prompt, num_chapters, writing_style)
 ```
 
 This will generate a novel based on the given prompt with 20 chapters. Note -- prompts with less than 7 chapters tend to cause issues.
