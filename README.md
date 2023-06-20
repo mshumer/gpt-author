@@ -12,7 +12,7 @@ The AI is asked to generate a list of potential plots based on a given prompt. I
 
 ## Usage
 
-You can run this project in Google Colab or in a local Jupyter notebook. 
+You can [run this project in Google Colab](https://colab.research.google.com/drive/1er_3U7lr6m4GJ-aHE6Pgeq9KXploxp4d?usp=sharing) or in a local Jupyter notebook. 
 
 In Google Colab, simply open the notebook, add your API keys, and run the cells in order. 
 
