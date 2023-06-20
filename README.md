@@ -4,7 +4,7 @@ This project utilizes a chain of GPT-4 and Stable Diffusion API calls to generat
 
 **A 15-chapter novel can cost as little as $4 to produce, and is written in just a few minutes.**
 
-A few output novel examples are provided in this repo.
+A few output novel examples are provided in this repo. To read one, you can download its file and view it on https://www.fviewer.com/view-epub, or install it on your Kindle, etc.
 
 ## How It Works
 
