@@ -43,6 +43,7 @@ Some initial ideas:
 - improve the prompts, as they were written very quickly
 - improve each step in the process, adding more checks, improvement generations, etc.
 - before generating improvements, have a model call identify potential improvements to add to the prompt, which will likely improve performance significantly
+- modify it to go beyond just fantasy, allowing users to generate other genres as well
 
 ## License
 
