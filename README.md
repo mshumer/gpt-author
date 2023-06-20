@@ -44,6 +44,7 @@ Some initial ideas:
 - improve each step in the process, adding more checks, improvement generations, etc.
 - before generating improvements, have a model call identify potential improvements to add to the prompt, which will likely improve performance significantly
 - modify it to go beyond just fantasy, allowing users to generate other genres as well
+- fix the issue that causes some chapters to cut off early
 
 ## License
 
