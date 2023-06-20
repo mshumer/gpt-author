@@ -49,4 +49,4 @@ This project is [MIT](https://github.com/your_username/your_repository/blob/mast
 
 Matt Shumer - [@mattshumer_](https://twitter.com/mattshumer_)
 
-Project Link: [ https://github.com/your_username/your_repository](https://github.com/mshumer/gpt-author)
+Project Link: [https://github.com/mshumer/gpt-author/](https://github.com/mshumer/gpt-author/ )
