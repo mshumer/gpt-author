@@ -1,6 +1,6 @@
 # gpt-author
 
-This project utilizes a chain of GPT-4 and Stable Diffusion API calls to generate an original fantasy novel. Users can provide an initial prompt and enter how many chapters they'd like it to be, and the AI then generates an entire novel, outputting an EPUB file compatible with e-book readers.
+This project utilizes a chain of GPT-4, Stable Diffusion, and Anthropic API calls to generate an original fantasy novel. Users can provide an initial prompt and enter how many chapters they'd like it to be, and the AI then generates an entire novel, outputting an EPUB file compatible with e-book readers.
 
 **A 15-chapter novel can cost as little as $4 to produce, and is written in just a few minutes.**
 
@@ -12,7 +12,7 @@ The AI is asked to generate a list of potential plots based on a given prompt. I
 
 ## Usage
 
-You can [run this project in Google Colab](https://colab.research.google.com/drive/1er_3U7lr6m4GJ-aHE6Pgeq9KXploxp4d?usp=sharing) or in a local Jupyter notebook. 
+You can [run the newest version of this project in Google Colab](https://colab.research.google.com/drive/1dJ_WQ_4OTm2F6e6hpqVc6CUCW_jBNHMd?usp=sharing) or in a local Jupyter notebook (use v2 for best results)!
 
 In Google Colab, simply open the notebook, add your API keys, and run the cells in order. 
 
@@ -38,7 +38,7 @@ This will generate a novel based on the given prompt with 20 chapters. Note -- p
 Contributions, issues, and feature requests are welcome!
 
 Some initial ideas:
-- modify it to work solely with GPT-3.5-Turbo and GPT-3.5-Turbo-16k (it will likely require some level of compression/summariztion of early chapters so we don't run out of tokens when generating later chapters).
+- modify it to work solely with GPT-3.5-Turbo, GPT-3.5-Turbo-16k, or Claude Instant (it will likely require some level of compression/summariztion of early chapters so we don't run out of tokens when generating later chapters).
 - improve the system for generating the first chapter -- the better the first chapter comes out, the better the rest of the novel is
 - improve the prompts, as they were written very quickly
 - improve each step in the process, adding more checks, improvement generations, etc.
