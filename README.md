@@ -38,7 +38,7 @@ This will generate a novel based on the given prompt with 20 chapters. Note -- p
 Contributions, issues, and feature requests are welcome!
 
 Some initial ideas:
-- modify it to work solely with GPT-3.5-Turbo, GPT-3.5-Turbo-16k, or Claude Instant (it will likely require some level of compression/summariztion of early chapters so we don't run out of tokens when generating later chapters).
+- modify it to work solely with GPT-3.5-Turbo, GPT-3.5-Turbo-16k, or Claude Instant (it will likely require some level of compression/summarization of early chapters so we don't run out of tokens when generating later chapters).
 - improve the system for generating the first chapter -- the better the first chapter comes out, the better the rest of the novel is
 - improve the prompts, as they were written very quickly
 - improve each step in the process, adding more checks, improvement generations, etc.
