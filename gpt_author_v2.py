@@ -13,8 +13,8 @@ import json
 
 load_dotenv()
 
-openai.api_key = "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" # get it at https://platform.openai.com/
-stability_api_key = "sk-U2lb4WoLuv8AW8juJFs5xNvlcYXQqZykgzGMxCzTtlsL7iKY" # get it at https://beta.dreamstudio.ai/
+openai.api_key = os.getenv("OPENAIKEY") # get it at https://platform.openai.com/
+stability_api_key = os.getenv("STABILITYKEY") # get it at https://beta.dreamstudio.ai/
 anthropic_api_key = "YOUR ANTHROPIC API KEY" # optional, if you don't add it, keep it as "YOUR ANTHROPIC API KEY"
 
 if anthropic_api_key != "YOUR ANTHROPIC API KEY":
