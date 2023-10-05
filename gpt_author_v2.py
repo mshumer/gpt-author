@@ -15,7 +15,7 @@ load_dotenv()
 
 openai.api_key = os.getenv("OPENAIKEY") # get it at https://platform.openai.com/
 stability_api_key = os.getenv("STABILITYKEY") # get it at https://beta.dreamstudio.ai/
-anthropic_api_key = "YOUR ANTHROPIC API KEY" # optional, if you don't add it, keep it as "YOUR ANTHROPIC API KEY"
+anthropic_api_key = os.getenv("ANTHROPICKEY") or "YOUR ANTHROPIC API KEY" # optional, if you don't add it, keep it as "YOUR ANTHROPIC API KEY"
 
 if anthropic_api_key != "YOUR ANTHROPIC API KEY":
   claude_true = True
