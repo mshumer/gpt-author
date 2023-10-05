@@ -478,13 +478,13 @@ def write_fantasy_novel(prompt, num_chapters, writing_style, claude_true=False):
 
 def create_fantasy_novel(prompt, num_chapters, writing_style, extra_guideline, plot_design, world_building, character_depth):
   if(extra_guideline):
-      writing_style = f"{writing_style} {extra_guideline}"
+      writing_style = f"{writing_style}\nExtra Guideline: {extra_guideline}"
   if(plot_design):
       writing_style = f"{writing_style}\nPlot Design: {plot_design}"
   if(world_building):
-      prompt = f"${prompt}\nThe World: {world_building}\n"
+      prompt = f"${prompt}\nThe World Building: {world_building}"
   if(character_depth):
-      prompt = f"${prompt}\nCharacters: {character_depth}\n"
+      prompt = f"${prompt}\nCharacters Depth: {character_depth}"
 
   novel, title, chapters, chapter_titles = write_fantasy_novel(prompt, num_chapters, writing_style, claude_true)
   
