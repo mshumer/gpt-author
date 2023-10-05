@@ -2,7 +2,7 @@ import gradio as gr
 import os
 from gpt_author_v2 import create_fantasy_novel
 
-INPUT_GUIDANCE = {
+INPUT_GUIDANCES = {
     'prompt': "Enter a brief scenario, question, or concept that encapsulates the primary idea or situation your novel will explore. This could be a conflict, a mystery, a setting, or a character's predicament.",
     'writing_style': "Describe the writing style for your novel. Consider aspects like sentence structure, tone, and lexicon. Examples might include 'concise and to-the-point', 'flowery and descriptive', or 'casual and conversational'.",
     'extra_guideline': "Include any additional instructions, preferences, or guidelines that are pertinent to the writing of your novel. This could encompass specific do's or don'ts, thematic considerations, or particular elements to include or avoid.",
@@ -22,13 +22,13 @@ def gradio_ui():
     iface = gr.Interface(
         fn=generate_and_save_novel, 
         inputs=[
-            gr.inputs.Textbox(lines=3, label="Prompt", placeholder=INPUT_GUIDANCE['prompt']),
+            gr.inputs.Textbox(lines=3, label="Prompt", placeholder=INPUT_GUIDANCES['prompt']),
             gr.inputs.Slider(minimum=1, maximum=100, default=15, label="Number of Chapters"),
-            gr.inputs.Textbox(lines=3, label="Writing Style", placeholder=INPUT_GUIDANCE['writing_style']),
-            gr.inputs.Textbox(lines=3, label="Extra Guideline", placeholder=INPUT_GUIDANCE['extra_guideline'], optional=True),
-            gr.inputs.Textbox(lines=3, label="Plot Design", placeholder=INPUT_GUIDANCE['plot_design'], optional=True),
-            gr.inputs.Textbox(lines=3, label="World Building", placeholder=INPUT_GUIDANCE['world_building'], optional=True),
-            gr.inputs.Textbox(lines=3, label="Character Depth", placeholder=INPUT_GUIDANCE['character_depth'], optional=True)
+            gr.inputs.Textbox(lines=3, label="Writing Style", placeholder=INPUT_GUIDANCES['writing_style']),
+            gr.inputs.Textbox(lines=3, label="Extra Guideline", placeholder=INPUT_GUIDANCES['extra_guideline'], optional=True),
+            gr.inputs.Textbox(lines=3, label="Plot Design", placeholder=INPUT_GUIDANCES['plot_design'], optional=True),
+            gr.inputs.Textbox(lines=3, label="World Building", placeholder=INPUT_GUIDANCES['world_building'], optional=True),
+            gr.inputs.Textbox(lines=3, label="Character Depth", placeholder=INPUT_GUIDANCES['character_depth'], optional=True)
         ],
         outputs=gr.outputs.File(label="Download Generated Novel"),
         live=False, # This means the function will only be called when the user presses the "Submit" button
