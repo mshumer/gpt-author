@@ -1,0 +1,6 @@
+openai
+ebooklib
+base64
+requests
+python-dotenv
+anthropic
