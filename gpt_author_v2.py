@@ -26,12 +26,13 @@ IMAGE_FOLDER = 'content/images'
 
 def generate_cover_prompt(plot):
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo-16k",
+        model="gpt-4",
         messages=[
             {"role": "system", "content": "You are a creative assistant that writes a spec for the cover art of a book, based on the book's plot."},
             {"role": "user", "content": f"Plot: {plot}\n\n--\n\nDescribe the cover we should create, based on the plot. This should be two sentences long, maximum."}
         ]
     )
+    print_step_costs(response, "gpt-4")
     return response['choices'][0]['message']['content']
 
 
@@ -258,14 +259,14 @@ def improve_plot(plot):
 
 def get_title(plot):
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo-16k",
+        model="gpt-4",
         messages=[
             {"role": "system", "content": "You are an expert writer."},
             {"role": "user", "content": f"Here is the plot: {plot}\n\nWhat is the title of this book? Just respond with the title, do nothing else."}
         ]
     )
 
-    print_step_costs(response, "gpt-3.5-turbo-16k")
+    print_step_costs(response, "gpt-4")
 
     return response['choices'][0]['message']['content']
 
@@ -309,24 +310,24 @@ def write_first_chapter(plot, first_chapter_title, writing_style, claude=False):
 
     else:
       response = openai.ChatCompletion.create(
-          model="gpt-4",
+          model="gpt-3.5-turbo-16k",
           messages=[
               {"role": "system", "content": "You are a world-class fantasy writer."},
               {"role": "user", "content": f"Here is the high-level plot to follow: {plot}\n\nWrite the first chapter of this novel: `{first_chapter_title}`.\n\nMake it incredibly unique, engaging, and well-written.\n\nHere is a description of the writing style you should use: `{writing_style}`\n\nInclude only the chapter text. There is no need to rewrite the chapter name."}
           ]
       )
 
-      print_step_costs(response, "gpt-4")
+      print_step_costs(response, "gpt-3.5-turbo-16k")
 
       improved_response = openai.ChatCompletion.create(
-          model="gpt-3.5-turbo-16k",
+          model="gpt-4",
           messages=[
               {"role": "system", "content": "You are a world-class fantasy writer. Your job is to take your student's rough initial draft of the first chapter of their fantasy novel, and rewrite it to be significantly better, with much more detail."},
               {"role": "user", "content": f"Here is the high-level plot you asked your student to follow: {plot}\n\nHere is the first chapter they wrote: {response['choices'][0]['message']['content']}\n\nNow, rewrite the first chapter of this novel, in a way that is far superior to your student's chapter. It should still follow the exact same plot, but it should be far more detailed, much longer, and more engaging. Here is a description of the writing style you should use: `{writing_style}`"}
           ]
       )
 
-      print_step_costs(response, "gpt-3.5-turbo-16k")
+      print_step_costs(response, "gpt-4")
 
       return improved_response['choices'][0]['message']['content']
 
