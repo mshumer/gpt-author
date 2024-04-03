@@ -4,7 +4,12 @@ This project utilizes a chain of GPT-4, Stable Diffusion, and Anthropic API call
 
 **A 15-chapter novel can cost as little as $4 to produce, and is written in just a few minutes.**
 
-A few output novel examples are provided in this repo. To read one, you can download its file and view it on https://www.fviewer.com/view-epub, or install it on your Kindle, etc.
+## *New 4/2/24: The Claude 3 Version*
+I've added a new version of gpt-author that takes full advantage of Anthropic's Claude 3 model. This version uses much simpler code and planning, but writes far better novels. Try it out with the Claude_Author.ipynb notebook in the repo!
+
+---
+
+*A few output novel examples from the original (outdated) system are provided in this repo. To read one, you can download its file and view it on https://www.fviewer.com/view-epub, or install it on your Kindle, etc.*
 
 ## How It Works
 
